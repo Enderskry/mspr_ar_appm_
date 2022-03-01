@@ -22,9 +22,9 @@ jobs:
         
         # Build Windows and OSX
         - name: Build Windows Player
-          run: /opt/Unity/Editor/Unity -quit -nographics -silent-crashes -noUpm -logFile -projectPath .  -buildWindows64Player ./bin-win64/CISample.exe
+          run: /opt/Unity/Editor/Unity -quit -nographics -silent-crashes -noUpm -logFile -projectPath .  -batchmode -buildWindows64Player ./bin-win64/CISample.exe
         - name: Build OSX Player
-          run: /opt/Unity/Editor/Unity -quit -nographics -silent-crashes -noUpm -logFile -projectPath .  -buildOSXUniversalPlayer ./bin-osx/CISample.app      
+          run: /opt/Unity/Editor/Unity -quit -nographics -silent-crashes -noUpm -logFile -projectPath .  -batchmode -buildOSXUniversalPlayer ./bin-osx/CISample.app      
         
         - name: Zip Builds
           run: |
